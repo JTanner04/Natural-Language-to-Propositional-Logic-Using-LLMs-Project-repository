@@ -1,0 +1,118 @@
+ambiguous,category,counterexample,duration_seconds,equivalent,error,explanation,formula,id,model,ok,raw,reference_formula,requirement,sat_status,syntax_valid
+False,implication,,20.25309620797634,True,,"The requirement states that if S (the sensor detecting motion) is true, then A (the alarm sounding) must be true. This is represented by the implication operator (→), which in propositional logic means 'if...then...' or equivalently ¬S ∨ A.",(S) → (A),B01,qwen2.5:3b,True,"{
+  ""formula"": ""(S) → (A)"",
+  ""explanation"": ""The requirement states that if S (the sensor detecting motion) is true, then A (the alarm sounding) must be true. This is represented by the implication operator (→), which in propositional logic means 'if...then...' or equivalently ¬S ∨ A.""
+}",S -> A,"If the sensor detects motion, then the alarm sounds.",UNSAT,True
+False,reverse implication,"{'A': False, 'S': True}",0.8653688329504803,False,,"The alarm (A) only sounds if the sensor (S) detects motion, which is represented by A → S.",A → S,B02,qwen2.5:3b,True,"{
+  ""formula"": ""A → S"",
+  ""explanation"": ""The alarm (A) only sounds if the sensor (S) detects motion, which is represented by A → S.""
+}",S -> A,The alarm sounds if the sensor detects motion.,SAT,True
+False,only if,"{'D': False, 'M': True}",1.4187662081094459,False,,"The proposition symbols used are M for 'robot can move' and D for 'door is open'. The requirement states that the robot can only move if the door is open, which translates to D implying M or in logical terms, (D) → (M).",(D) → (M),B03,qwen2.5:3b,True,"{
+  ""formula"": ""(D) → (M)"",
+  ""explanation"": ""The proposition symbols used are M for 'robot can move' and D for 'door is open'. The requirement states that the robot can only move if the door is open, which translates to D implying M or in logical terms, (D) → (M).""
+}",M -> D,The robot can move only if the door is open.,SAT,True
+False,only if,"{'D': False, 'L': True}",1.4412647089920938,False,,"This formula states that the ability to download (D) implies being logged in (L), and not downloading (¬D) implies not being logged in (¬L). This captures the idea that a user can only download if they are logged in.",(D → L) ∧ (¬D → ¬L),B04,qwen2.5:3b,True,"{
+  ""formula"": ""(D → L) ∧ (¬D → ¬L)"",
+  ""explanation"": ""This formula states that the ability to download (D) implies being logged in (L), and not downloading (¬D) implies not being logged in (¬L). This captures the idea that a user can only download if they are logged in.""
+}",D -> L,A user can download only if logged in.,SAT,True
+False,iff,,1.0650017920415848,True,,The formula L ↔ S correctly represents the requirement that the light (L) is on if and only if the switch (S) is on using the IFF symbol for equivalence.,L ↔ S,B05,qwen2.5:3b,True,"{
+  ""formula"": ""L ↔ S"",
+  ""explanation"": ""The formula L ↔ S correctly represents the requirement that the light (L) is on if and only if the switch (S) is on using the IFF symbol for equivalence.""
+}",L <-> S,The light is on if and only if the switch is on.,UNSAT,True
+False,conjunction,,0.8464585420442745,True,,The server is running (S) and the database is available (D). This uses AND (∧) to combine both conditions.,(S ∧ D),B06,qwen2.5:3b,True,"{
+  ""formula"": ""(S ∧ D)"",
+  ""explanation"": ""The server is running (S) and the database is available (D). This uses AND (∧) to combine both conditions.""
+}",S AND D,The server is running and the database is available.,UNSAT,True
+False,disjunction,,1.262691208976321,True,,"The requirement states that the user may use either email (E) or SMS (S). The logical operator OR (∨) is used to represent this condition, meaning at least one of E or S must be true for the statement to hold.",(E ∨ S),B07,qwen2.5:3b,True,"{
+  ""formula"": ""(E ∨ S)"",
+  ""explanation"": ""The requirement states that the user may use either email (E) or SMS (S). The logical operator OR (∨) is used to represent this condition, meaning at least one of E or S must be true for the statement to hold.""
+}",E OR S,The user may use email or SMS.,UNSAT,True
+False,negation,,0.7818851670017466,True,,"The proposition P represents 'pump active'. Therefore, ¬P correctly expresses 'the pump is not active'.",¬P,B08,qwen2.5:3b,True,"{
+  ""formula"": ""¬P"",
+  ""explanation"": ""The proposition P represents 'pump active'. Therefore, ¬P correctly expresses 'the pump is not active'.""
+}",NOT P,The pump is not active.,UNSAT,True
+False,unless,,0.8307781670009717,True,,The system does not shut down (NOT S) implies that backup power is available (B).,(NOT S) → (B),B09,qwen2.5:3b,True,"{
+  ""formula"": ""(NOT S) → (B)"",
+  ""explanation"": ""The system does not shut down (NOT S) implies that backup power is available (B).""
+}",NOT B -> S,The system shuts down unless backup power is available.,UNSAT,True
+False,nested,,1.167212791973725,True,,"The formula (K ∧ U) → A correctly represents the requirement that if both the key is valid (K) and the user is authorized (U), then access is granted (A).",(K ∧ U) → A,B10,qwen2.5:3b,True,"{
+  ""formula"": ""(K ∧ U) → A"",
+  ""explanation"": ""The formula (K ∧ U) → A correctly represents the requirement that if both the key is valid (K) and the user is authorized (U), then access is granted (A).""
+}",(K AND U) -> A,"If the key is valid and the user is authorized, then access is granted.",UNSAT,True
+False,nested,"{'C': True, 'E': False, 'N': True}",1.6602589160902426,False,,"If N is true (network is down), then it must be the case that both email and chat do not work, which is represented by ¬(E ∧ C). The implication (N →) ensures that if N is true, then the condition on the right (¬(E ∧ C)) must also be true.",(N → ¬(E ∧ C)),B11,qwen2.5:3b,True,"{
+  ""formula"": ""(N → ¬(E ∧ C))"",
+  ""explanation"": ""If N is true (network is down), then it must be the case that both email and chat do not work, which is represented by ¬(E ∧ C). The implication (N →) ensures that if N is true, then the condition on the right (¬(E ∧ C)) must also be true.""
+}",N -> (NOT E AND NOT C),"If the network is down, then neither email nor chat works.",SAT,True
+False,multiple,,1.4424449170473963,True,,"The report (R) is sent when both it is approved (A) and the manager is present (M). This is represented by ((A ∧ M) → R), meaning if A and M are true, then R must be true for the report to be sent.",(A ∧ M) → R,B12,qwen2.5:3b,True,"{
+  ""formula"": ""(A ∧ M) → R"",
+  ""explanation"": ""The report (R) is sent when both it is approved (A) and the manager is present (M). This is represented by ((A ∧ M) → R), meaning if A and M are true, then R must be true for the report to be sent.""
+}",(A AND M) -> R,The report is sent when it is approved and the manager is present.,UNSAT,True
+False,implication,,1.023190667037852,True,,"The requirement states that if the battery (B) is low, then the device displays a warning (W). This can be represented by the implication formula B → W.",(B → W),B13,qwen2.5:3b,True,"{
+  ""formula"": ""(B → W)"",
+  ""explanation"": ""The requirement states that if the battery (B) is low, then the device displays a warning (W). This can be represented by the implication formula B → W.""
+}",B -> W,"If the battery is low, the device displays a warning.",UNSAT,True
+False,reverse implication,,1.2095752079039812,True,,"The proposition symbols used are B for 'battery low' and W for 'warning displayed'. The formula '(B) → (W)' means that if the battery is low, then a warning will be displayed.",(B) → (W),B14,qwen2.5:3b,True,"{
+  ""formula"": ""(B) → (W)"",
+  ""explanation"": ""The proposition symbols used are B for 'battery low' and W for 'warning displayed'. The formula '(B) → (W)' means that if the battery is low, then a warning will be displayed.""
+}",B -> W,The device displays a warning if the battery is low.,UNSAT,True
+False,iff,"{'E': True, 'F': False}",1.6751495000207797,False,,"The condition states that a file is encrypted exactly when encryption is enabled. This means either encryption must be enabled and the file must not be encrypted, or the file must be encrypted (which implies encryption should also be enabled). The formula captures this by using logical operators to ensure only one of these conditions can be true at any given time.",(E ∧ ¬F) ∨ F,B15,qwen2.5:3b,True,"{
+  ""formula"": ""(E ∧ ¬F) ∨ F"",
+  ""explanation"": ""The condition states that a file is encrypted exactly when encryption is enabled. This means either encryption must be enabled and the file must not be encrypted, or the file must be encrypted (which implies encryption should also be enabled). The formula captures this by using logical operators to ensure only one of these conditions can be true at any given time.""
+}",F <-> E,A file is encrypted exactly when encryption is enabled.,SAT,True
+False,conjunction,,1.0850123749114573,True,,"The formula represents both propositions D (door locked) and W (window closed) connected by AND (∧), indicating that both conditions must be true for the statement to hold.",(D) ∧ (W),B16,qwen2.5:3b,True,"{
+  ""formula"": ""(D) ∧ (W)"",
+  ""explanation"": ""The formula represents both propositions D (door locked) and W (window closed) connected by AND (∧), indicating that both conditions must be true for the statement to hold.""
+}",D AND W,The door is locked and the window is closed.,UNSAT,True
+False,disjunction,,1.5504792920546606,True,,"The formula (P ∨ B) represents the requirement that either the primary server (P) or the backup server (B) must respond. The symbol ∨ denotes an 'or' condition in propositional logic, meaning at least one of P or B must be true for the whole statement to be true.",(P ∨ B),B17,qwen2.5:3b,True,"{
+  ""formula"": ""(P ∨ B)"",
+  ""explanation"": ""The formula (P ∨ B) represents the requirement that either the primary server (P) or the backup server (B) must respond. The symbol ∨ denotes an 'or' condition in propositional logic, meaning at least one of P or B must be true for the whole statement to be true.""
+}",P OR B,Either the primary server or the backup server responds.,UNSAT,True
+False,negation,,1.4841776670655236,True,,"The formula ¬(C ∧ D) represents the requirement that it is not the case that both cache (C) and database (D) are unavailable. The ¬ symbol denotes negation, so ¬(C ∧ D) means that at least one of C or D must be available.",¬(C ∧ D),B18,qwen2.5:3b,True,"{
+  ""formula"": ""¬(C ∧ D)"",
+  ""explanation"": ""The formula ¬(C ∧ D) represents the requirement that it is not the case that both cache (C) and database (D) are unavailable. The ¬ symbol denotes negation, so ¬(C ∧ D) means that at least one of C or D must be available.""
+}",NOT (C AND D),It is not the case that both cache and database are unavailable.,UNSAT,True
+False,unless,"{'F': True, 'S': False}",1.616758415941149,False,,"This formula states that if all required fields are filled (F), then the user can submit (S). Additionally, if any of the required fields are not filled (¬F), then the user cannot submit (¬S). This covers both scenarios where submission is possible and impossible based on field filling.",(F → S) ∧ (¬F → ¬S),B19,qwen2.5:3b,True,"{
+  ""formula"": ""(F → S) ∧ (¬F → ¬S)"",
+  ""explanation"": ""This formula states that if all required fields are filled (F), then the user can submit (S). Additionally, if any of the required fields are not filled (¬F), then the user cannot submit (¬S). This covers both scenarios where submission is possible and impossible based on field filling.""
+}",S -> F,The user cannot submit unless every required field is filled.,SAT,True
+False,nested,,1.512040791916661,True,,"The test passes (T) implies either the build deploys (D) or a report is created (R). This is represented as T → (D ∨ R), where T represents 'test passes', D represents 'build deploys', and R represents 'report created'.",(T → (D ∨ R)),B20,qwen2.5:3b,True,"{
+  ""formula"": ""(T → (D ∨ R))"",
+  ""explanation"": ""The test passes (T) implies either the build deploys (D) or a report is created (R). This is represented as T → (D ∨ R), where T represents 'test passes', D represents 'build deploys', and R represents 'report created'.""
+}",T -> (D OR R),"If the test passes, then the build deploys or a report is created.",UNSAT,True
+False,multiple,,1.6780149169499055,True,,"The machine (M) starts if power (P) is connected and either the button (B) is pressed or remote start (R) is enabled. This can be represented as ((P ∧ B) ∨ (P ∧ R)), which simplifies to (P ∧ (B ∨ R)) → M.",(P ∧ (B ∨ R)) → M,B21,qwen2.5:3b,True,"{
+  ""formula"": ""(P ∧ (B ∨ R)) → M"",
+  ""explanation"": ""The machine (M) starts if power (P) is connected and either the button (B) is pressed or remote start (R) is enabled. This can be represented as ((P ∧ B) ∨ (P ∧ R)), which simplifies to (P ∧ (B ∨ R)) → M.""
+}",(P AND (B OR R)) -> M,The machine starts if power is connected and either the button is pressed or remote start is enabled.,UNSAT,True
+False,implication,,1.568198874942027,True,,"The requirement states that if the condition 'order canceled' (C) is true, then the consequent 'payment refunded' (R) must also be true. This is represented by the implication operator (→), which in propositional logic means 'if...then...' or equivalently ¬C ∨ R.",(C) → (R),B22,qwen2.5:3b,True,"{
+  ""formula"": ""(C) → (R)"",
+  ""explanation"": ""The requirement states that if the condition 'order canceled' (C) is true, then the consequent 'payment refunded' (R) must also be true. This is represented by the implication operator (→), which in propositional logic means 'if...then...' or equivalently ¬C ∨ R.""
+}",C -> R,"If an order is canceled, then payment is refunded.",UNSAT,True
+False,only if,"{'E': True, 'S': False}",1.15372183395084,False,,"This formula reads as 'If all safety checks pass, then the experiment runs'. It uses implication (→), where S represents 'all safety checks pass' and E represents 'the experiment runs'.",(S) → E,B23,qwen2.5:3b,True,"{
+  ""formula"": ""(S) → E"",
+  ""explanation"": ""This formula reads as 'If all safety checks pass, then the experiment runs'. It uses implication (→), where S represents 'all safety checks pass' and E represents 'the experiment runs'.""
+}",E -> S,The experiment runs only if all safety checks pass.,SAT,True
+False,iff,,0.9440174160990864,,Unexpected character at position 0: '<',,,B24,qwen2.5:3b,False,,A <-> V,The account is active if and only if verification succeeds.,,False
+False,nested,,1.1210557079175487,True,,"The formula (R ∨ S) → E states that if either it is raining (R) or snowing (S), then the event (E) is canceled.",(R ∨ S) → E,B25,qwen2.5:3b,True,"{
+  ""formula"": ""(R ∨ S) → E"",
+  ""explanation"": ""The formula (R ∨ S) → E states that if either it is raining (R) or snowing (S), then the event (E) is canceled.""
+}",(R OR S) -> E,"If it is raining or snowing, then the event is canceled.",UNSAT,True
+False,multiple,,1.2448086249642074,True,,"The requirement states that if the token is valid, then both access should be granted and the audit log should be written. This is represented by ((T implies A) AND (T implies L)).",(T → A) ∧ (T → L),B26,qwen2.5:3b,True,"{
+  ""formula"": ""(T → A) ∧ (T → L)"",
+  ""explanation"": ""The requirement states that if the token is valid, then both access should be granted and the audit log should be written. This is represented by ((T implies A) AND (T implies L)).""
+}",T -> (A AND L),"If the token is valid, access is granted, and the audit log is written.",UNSAT,True
+True,ambiguous,,1.2384403749601915,,,"The requirement states that the system must be both fast (F) and secure (S). This is represented by the conjunction (AND operation) of F and S, which in propositional logic is denoted as (F ∧ S).",(F ∧ S),B27,qwen2.5:3b,True,"{
+  ""formula"": ""(F ∧ S)"",
+  ""explanation"": ""The requirement states that the system must be both fast (F) and secure (S). This is represented by the conjunction (AND operation) of F and S, which in propositional logic is denoted as (F ∧ S).""
+}",,The system is fast and secure.,,True
+True,ambiguous,,1.6500036669895053,,,"The door (D) opens if either the card is valid (C) or the guard approves (G). This is represented by ((C ∨ G) → D), where the implication arrow (→) indicates that for the condition to be true, either C or G must be true, leading to D being true.",(C ∨ G) → D,B28,qwen2.5:3b,True,"{
+  ""formula"": ""(C ∨ G) → D"",
+  ""explanation"": ""The door (D) opens if either the card is valid (C) or the guard approves (G). This is represented by ((C ∨ G) → D), where the implication arrow (→) indicates that for the condition to be true, either C or G must be true, leading to D being true.""
+}",,The door opens if the card is valid or the guard approves.,,True
+True,ambiguous,,1.130307040992193,,,"This formula states that if users are not restricted (NOT R), then they can access the records (A). This directly translates to the requirement: Users can access records unless they are restricted.",(NOT R) → A,B29,qwen2.5:3b,True,"{
+  ""formula"": ""(NOT R) → A"",
+  ""explanation"": ""This formula states that if users are not restricted (NOT R), then they can access the records (A). This directly translates to the requirement: Users can access records unless they are restricted.""
+}",,Users can access records unless they are restricted.,,True
+True,ambiguous,,1.1348623329540715,,,The alarm (A) does not sound unless the building (E) is not empty. This can be rephrased as the negation of 'the building is empty' implies the alarm sounds.,NOT E → A,B30,qwen2.5:3b,True,"{
+  ""formula"": ""NOT E → A"",
+  ""explanation"": ""The alarm (A) does not sound unless the building (E) is not empty. This can be rephrased as the negation of 'the building is empty' implies the alarm sounds.""
+}",,The alarm sounds when the building is empty.,,True

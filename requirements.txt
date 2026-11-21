@@ -1,0 +1,5 @@
+streamlit>=1.36
+z3-solver>=4.13
+ollama>=0.3
+pandas>=2.2
+pytest>=8.0

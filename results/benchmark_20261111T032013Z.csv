@@ -1,0 +1,31 @@
+ambiguous,category,duration_seconds,error,id,model,ok,reference_formula,requirement,syntax_valid
+False,implication,0.010486166924238205,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B01,qwen2.5:3b,False,S -> A,"If the sensor detects motion, then the alarm sounds.",False
+False,reverse implication,0.0016749580390751362,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B02,qwen2.5:3b,False,S -> A,The alarm sounds if the sensor detects motion.,False
+False,only if,0.0009930829983204603,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B03,qwen2.5:3b,False,M -> D,The robot can move only if the door is open.,False
+False,only if,0.0011105840094387531,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B04,qwen2.5:3b,False,D -> L,A user can download only if logged in.,False
+False,iff,0.0007926250109449029,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B05,qwen2.5:3b,False,L <-> S,The light is on if and only if the switch is on.,False
+False,conjunction,0.0007518329657614231,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B06,qwen2.5:3b,False,S AND D,The server is running and the database is available.,False
+False,disjunction,0.0006730000022798777,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B07,qwen2.5:3b,False,E OR S,The user may use email or SMS.,False
+False,negation,0.0007642920827493072,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B08,qwen2.5:3b,False,NOT P,The pump is not active.,False
+False,unless,0.0007056249305605888,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B09,qwen2.5:3b,False,NOT B -> S,The system shuts down unless backup power is available.,False
+False,nested,0.0007279169512912631,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B10,qwen2.5:3b,False,(K AND U) -> A,"If the key is valid and the user is authorized, then access is granted.",False
+False,nested,0.0007116249762475491,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B11,qwen2.5:3b,False,N -> (NOT E AND NOT C),"If the network is down, then neither email nor chat works.",False
+False,multiple,0.0007639999967068434,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B12,qwen2.5:3b,False,(A AND M) -> R,The report is sent when it is approved and the manager is present.,False
+False,implication,0.0006521249888464808,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B13,qwen2.5:3b,False,B -> W,"If the battery is low, the device displays a warning.",False
+False,reverse implication,0.0006515000713989139,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B14,qwen2.5:3b,False,B -> W,The device displays a warning if the battery is low.,False
+False,iff,0.0006694579496979713,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B15,qwen2.5:3b,False,F <-> E,A file is encrypted exactly when encryption is enabled.,False
+False,conjunction,0.0006758749950677156,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B16,qwen2.5:3b,False,D AND W,The door is locked and the window is closed.,False
+False,disjunction,0.0006756660295650363,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B17,qwen2.5:3b,False,P OR B,Either the primary server or the backup server responds.,False
+False,negation,0.0006955839926376939,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B18,qwen2.5:3b,False,NOT (C AND D),It is not the case that both cache and database are unavailable.,False
+False,unless,0.0006873749662190676,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B19,qwen2.5:3b,False,S -> F,The user cannot submit unless every required field is filled.,False
+False,nested,0.0006772499764338136,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B20,qwen2.5:3b,False,T -> (D OR R),"If the test passes, then the build deploys or a report is created.",False
+False,multiple,0.0006326669827103615,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B21,qwen2.5:3b,False,(P AND (B OR R)) -> M,The machine starts if power is connected and either the button is pressed or remote start is enabled.,False
+False,implication,0.0006925420602783561,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B22,qwen2.5:3b,False,C -> R,"If an order is canceled, then payment is refunded.",False
+False,only if,0.0006652079755440354,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B23,qwen2.5:3b,False,E -> S,The experiment runs only if all safety checks pass.,False
+False,iff,0.0006929580122232437,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B24,qwen2.5:3b,False,A <-> V,The account is active if and only if verification succeeds.,False
+False,nested,0.0006752080516889691,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B25,qwen2.5:3b,False,(R OR S) -> E,"If it is raining or snowing, then the event is canceled.",False
+False,multiple,0.0006309159798547626,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B26,qwen2.5:3b,False,T -> (A AND L),"If the token is valid, access is granted, and the audit log is written.",False
+True,ambiguous,0.0006275830091908574,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B27,qwen2.5:3b,False,,The system is fast and secure.,False
+True,ambiguous,0.0007213749922811985,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B28,qwen2.5:3b,False,,The door opens if the card is valid or the guard approves.,False
+True,ambiguous,0.0006549580721184611,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B29,qwen2.5:3b,False,,Users can access records unless they are restricted.,False
+True,ambiguous,0.0007014579605311155,"model ""qwen2.5:3b"" not found, try pulling it first (status code: 404)",B30,qwen2.5:3b,False,,The alarm sounds when the building is empty.,False
